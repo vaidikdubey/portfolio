@@ -1,7 +1,26 @@
-import { Mail, MapPin, Phone } from "lucide-react";
+import { Mail, MapPin, Phone, Send } from "lucide-react";
+import { useState } from "react";
 import { FaGithub, FaLinkedin, FaXTwitter } from "react-icons/fa6";
+import { cn } from "@/lib/utils.js";
 
 export const ContactSection = () => {
+    const MESSAGE_MAX_LENGTH = 1000;
+
+    const [message, setMessage] = useState("");
+
+    const [isSubmitting, setIsSubmitting] = useState(false);
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+
+        setIsSubmitting(true);
+
+        setTimeout(() => {
+            alert("Message Sent!");
+            setIsSubmitting(false);
+        }, 1500);
+    };
+
     return (
         <section id="contact" className="py-24 px-4 relative bg-secondary/30">
             <div className="container mx-auto max-w-5xl">
@@ -104,7 +123,87 @@ export const ContactSection = () => {
                     </div>
 
                     {/* Contact Form */}
-                    <div></div>
+                    <div
+                        className="bg-card p-8 rounded-lg shadow-xs"
+                        onSubmit={handleSubmit}
+                    >
+                        <h3 className="text-2xl font-semibold mb-6">
+                            Send a Message
+                        </h3>
+
+                        <form className="space-y-6">
+                            <div>
+                                <label
+                                    htmlFor="name"
+                                    className="block text-sm font-medium mb-2"
+                                >
+                                    Name
+                                </label>
+                                <input
+                                    type="text"
+                                    id="name"
+                                    name="name"
+                                    required
+                                    className="w-full px-4 py-3 rounded-md border border-input bg-background focus:outline-hidden focus:ring-2 focus:ring-primary"
+                                    placeholder="John Doe..."
+                                />
+                            </div>
+                            <div>
+                                <label
+                                    htmlFor="email"
+                                    className="block text-sm font-medium mb-2"
+                                >
+                                    Email
+                                </label>
+                                <input
+                                    type="email"
+                                    id="email"
+                                    name="email"
+                                    required
+                                    className="w-full px-4 py-3 rounded-md border border-input bg-background focus:outline-hidden focus:ring-2 focus:ring-primary"
+                                    placeholder="john.doe@example.com"
+                                />
+                            </div>
+                            <div>
+                                <label
+                                    htmlFor="message"
+                                    className="block text-sm font-medium mb-2"
+                                >
+                                    Your Message
+                                </label>
+                                <textarea
+                                    id="message"
+                                    name="message"
+                                    required
+                                    className="w-full px-4 py-3 rounded-md border border-input bg-background focus:outline-hidden focus:ring-2 focus:ring-primary"
+                                    maxLength={MESSAGE_MAX_LENGTH}
+                                    value={message}
+                                    onChange={(e) => setMessage(e.target.value)}
+                                    placeholder="Hello, I'd like to talk about..."
+                                />
+                                <div
+                                    className={`text-xs md:text-sm text-right ${
+                                        MESSAGE_MAX_LENGTH - message.length <=
+                                        100
+                                            ? "text-red-500"
+                                            : "text-gray-500"
+                                    } ${message.length === 0 ? "hidden" : "block"}`}
+                                >
+                                    {MESSAGE_MAX_LENGTH - message.length}{" "}
+                                    characters left
+                                </div>
+                            </div>
+                            <button
+                                type="submit"
+                                disabled={isSubmitting}
+                                className={cn(
+                                    "cosmic-button w-full flex items-center justify-center gap-2",
+                                )}
+                            >
+                                {isSubmitting ? "Sending..." : "Send Message"} <Send size={16} />
+                            </button>
+                        </form>
+                    </div>
                 </div>
             </div>
         </section>
