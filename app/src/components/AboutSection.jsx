@@ -34,7 +34,7 @@ export const AboutSection = () => {
                             </a>
 
                             <a
-                                href="./public/Vaidik_Dubey_Resume.pdf"
+                                href="/Vaidik_Dubey_Resume.pdf"
                                 download="Vaidik_Dubey_Resume.pdf"
                                 className="px-6 py-2 rounded-full border border-primary text-foreground hover:bg-primary/30 transition-colors duration-300 font-bold"
                             >
