@@ -3,23 +3,55 @@ import { useState } from "react";
 import { FaGithub, FaLinkedin, FaXTwitter } from "react-icons/fa6";
 import { cn } from "@/lib/utils.js";
 import { toast } from "react-hot-toast";
+import { sendEmail } from "@/lib/email.js";
+import ReCAPTCHA from "react-google-recaptcha";
+import { useRef } from "react";
 
 export const ContactSection = () => {
     const MESSAGE_MAX_LENGTH = 1000;
+
+    const recaptchaRef = useRef(null);
 
     const [message, setMessage] = useState("");
 
     const [isSubmitting, setIsSubmitting] = useState(false);
 
-    const handleSubmit = (e) => {
+    const [captchaToken, setCaptchaToken] = useState(null);
+
+    const handleSubmit = async (e) => {
         e.preventDefault();
 
         setIsSubmitting(true);
 
-        setTimeout(() => {
+        if (!captchaToken) {
+            toast.error("Please complete the reCAPTCHA.");
+            return;
+        }
+
+        const formData = new FormData(e.currentTarget);
+
+        try {
+            await sendEmail({
+                name: formData.get("name"),
+                email: formData.get("email"),
+                message: formData.get("message"),
+                captchaToken,
+            });
+
             toast.success("Message sent successfully!");
+
+            e.currentTarget.reset();
+            setMessage("");
+        } catch (error) {
+            if (import.meta.env.DEV) {
+                console.error("EmailJS Error:", error);
+            }
+            toast.error("Couldn't send your message. Please try again later.");
+        } finally {
             setIsSubmitting(false);
-        }, 1500);
+            recaptchaRef.current?.reset();
+            setCaptchaToken(null);
+        }
     };
 
     return (
@@ -124,15 +156,12 @@ export const ContactSection = () => {
                     </div>
 
                     {/* Contact Form */}
-                    <div
-                        className="bg-card p-8 rounded-lg shadow-xs"
-                        onSubmit={handleSubmit}
-                    >
+                    <div className="bg-card p-8 rounded-lg shadow-xs">
                         <h3 className="text-2xl font-semibold mb-6">
                             Send a Message
                         </h3>
 
-                        <form className="space-y-6">
+                        <form className="space-y-6" onSubmit={handleSubmit}>
                             <div>
                                 <label
                                     htmlFor="name"
@@ -194,9 +223,17 @@ export const ContactSection = () => {
                                     characters left
                                 </div>
                             </div>
+                            <ReCAPTCHA
+                                sitekey={
+                                    import.meta.env.VITE_RECAPTCHA_SITE_KEY
+                                }
+                                onChange={setCaptchaToken}
+                                theme={localStorage.getItem("theme")}
+                                ref={recaptchaRef}
+                            />
                             <button
                                 type="submit"
-                                disabled={isSubmitting}
+                                disabled={isSubmitting || !captchaToken}
                                 className={cn(
                                     "cosmic-button w-full flex items-center justify-center gap-2 text-xs md:text-base",
                                 )}
