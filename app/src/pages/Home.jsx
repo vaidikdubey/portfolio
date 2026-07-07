@@ -1,7 +1,15 @@
-import React from 'react'
-
 export const Home = () => {
-  return (
-    <div>Home</div>
-  )
-}
+    return (
+        <div className="min-h-screen ">
+            {/* Theme Toggle */}
+
+            {/* Background Effects */}
+
+            {/* Navbar */}
+
+            {/* Main Content */}
+
+            {/* Footer */}
+        </div>
+    );
+};
