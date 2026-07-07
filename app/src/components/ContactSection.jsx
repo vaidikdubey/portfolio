@@ -21,13 +21,14 @@ export const ContactSection = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
 
-        setIsSubmitting(true);
+        const form = e.currentTarget;
 
         if (!captchaToken) {
             toast.error("Please complete the reCAPTCHA.");
             return;
         }
 
+        setIsSubmitting(true);
         const formData = new FormData(e.currentTarget);
 
         try {
@@ -39,11 +40,12 @@ export const ContactSection = () => {
             });
 
             console.log(res);
+            if (res.status === 200) {
+                toast.success("Message sent successfully!");
 
-            toast.success("Message sent successfully!");
-
-            e.currentTarget.reset();
-            setMessage("");
+                form.reset();
+                setMessage("");
+            }
         } catch (error) {
             // if (import.meta.env.DEV) {
             //     console.error("EmailJS Error:", error);
