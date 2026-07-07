@@ -2,6 +2,7 @@ import { Mail, MapPin, Phone, Send } from "lucide-react";
 import { useState } from "react";
 import { FaGithub, FaLinkedin, FaXTwitter } from "react-icons/fa6";
 import { cn } from "@/lib/utils.js";
+import { toast } from "react-hot-toast";
 
 export const ContactSection = () => {
     const MESSAGE_MAX_LENGTH = 1000;
@@ -16,7 +17,7 @@ export const ContactSection = () => {
         setIsSubmitting(true);
 
         setTimeout(() => {
-            alert("Message Sent!");
+            toast.success("Message sent successfully!");
             setIsSubmitting(false);
         }, 1500);
     };
@@ -197,10 +198,11 @@ export const ContactSection = () => {
                                 type="submit"
                                 disabled={isSubmitting}
                                 className={cn(
-                                    "cosmic-button w-full flex items-center justify-center gap-2",
+                                    "cosmic-button w-full flex items-center justify-center gap-2 text-xs md:text-base",
                                 )}
                             >
-                                {isSubmitting ? "Sending..." : "Send Message"} <Send size={16} />
+                                {isSubmitting ? "Sending..." : "Send Message"}{" "}
+                                <Send size={16} />
                             </button>
                         </form>
                     </div>
