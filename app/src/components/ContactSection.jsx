@@ -31,7 +31,7 @@ export const ContactSection = () => {
         const formData = new FormData(e.currentTarget);
 
         try {
-            await sendEmail({
+            const res = await sendEmail({
                 name: formData.get("name"),
                 email: formData.get("email"),
                 message: formData.get("message"),
@@ -43,9 +43,10 @@ export const ContactSection = () => {
             e.currentTarget.reset();
             setMessage("");
         } catch (error) {
-            if (import.meta.env.DEV) {
-                console.error("EmailJS Error:", error);
-            }
+            // if (import.meta.env.DEV) {
+            //     console.error("EmailJS Error:", error);
+            // }
+            console.error("EmailJS Error:", error);
             toast.error("Couldn't send your message. Please try again later.");
         } finally {
             setIsSubmitting(false);
