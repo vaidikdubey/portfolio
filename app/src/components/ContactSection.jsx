@@ -39,7 +39,6 @@ export const ContactSection = () => {
                 captchaToken,
             });
 
-            console.log(res);
             if (res.status === 200) {
                 toast.success("Message sent successfully!");
 
@@ -47,10 +46,9 @@ export const ContactSection = () => {
                 setMessage("");
             }
         } catch (error) {
-            // if (import.meta.env.DEV) {
-            //     console.error("EmailJS Error:", error);
-            // }
-            console.error("EmailJS Error:", error);
+            if (import.meta.env.DEV) {
+                console.error("EmailJS Error:", error);
+            }
             toast.error("Couldn't send your message. Please try again later.");
         } finally {
             setIsSubmitting(false);
