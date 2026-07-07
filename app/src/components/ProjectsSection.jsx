@@ -1,4 +1,5 @@
-import { ArrowRight, ExternalLink, Link } from "lucide-react";
+import { ExternalLink } from "lucide-react";
+import { FaGithub } from "react-icons/fa";
 
 const projects = [
     {
@@ -92,7 +93,7 @@ export const ProjectsSection = () => {
                                             className="text-foreground/80 hover:text-primary transition-colors duration-300 flex justify-center items-center gap-2"
                                             target="_blank"
                                         >
-                                            Code <Link size={20} />
+                                            Code <FaGithub size={20} />
                                         </a>
                                     </div>
                                 </div>
@@ -107,7 +108,7 @@ export const ProjectsSection = () => {
                         target="_blank"
                         className="cosmic-button w-fit flex items-center mx-auto gap-2"
                     >
-                        Explore GitHub <ArrowRight size={20} />
+                        Explore GitHub <FaGithub size={20} />
                     </a>
                 </div>
             </div>
