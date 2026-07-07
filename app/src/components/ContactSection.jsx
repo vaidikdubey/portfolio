@@ -38,6 +38,8 @@ export const ContactSection = () => {
                 captchaToken,
             });
 
+            console.log(res);
+
             toast.success("Message sent successfully!");
 
             e.currentTarget.reset();
