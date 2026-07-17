@@ -6,6 +6,7 @@ This portfolio serves as my personal website where recruiters, developers, and p
 
 ## 🌐 Live Demo
 
+### [Vaidik Portfolio🔗](https://heyvaidik.vercel.app/)
 
 ## ✨ Features
 
@@ -13,7 +14,6 @@ This portfolio serves as my personal website where recruiters, developers, and p
 - ⚡ Smooth animations and transitions
 - 💼 Project showcase section
 - 🛠️ Skills & technologies overview
-- 📈 Experience timeline
 - 📬 Contact form
 - 📱 Mobile-friendly design
 - 🚀 Optimized performance
@@ -31,20 +31,24 @@ This portfolio serves as my personal website where recruiters, developers, and p
 - JavaScript (ES6+)
 - Git
 - GitHub
+- Vercel (deployment)
 
 ## 📂 Project Structure
 
 ```text
 portfolio/
-├── public/
-├── src/
-│   ├── assets/
-│   ├── components/
-│   ├── constants/
-│   ├── hoc/
-│   ├── styles/
-│   └── App.jsx
-├── package.json
+├── app/
+    ├── public/
+    ├── src/
+    │   ├── assets/
+    │   ├── components/
+    │   ├── lib/
+    │   ├── pages/
+    │   ├── utils/
+    │   ├── App.jsx
+    │   ├── index.css
+    │   └── main.jsx
+    ├── package.json
 └── README.md
 ```
 
@@ -59,7 +63,7 @@ git clone https://github.com/your-username/portfolio.git
 ### 2. Navigate to the project
 
 ```bash
-cd portfolio
+cd portfolio/app
 ```
 
 ### 3. Install dependencies
@@ -68,7 +72,11 @@ cd portfolio
 npm install
 ```
 
-### 4. Start the development server
+### 4. Add environment variables
+
+Create a `.env` file in the root directory and add the necessary environment variables as defined in the `.env.example` file.
+
+### 5. Start the development server
 
 ```bash
 npm run dev
@@ -82,7 +90,13 @@ http://localhost:5173
 
 ## 📸 Screenshots
 
-> Screenshots will be added after deployment.
+### Hero Section
+
+![Hero Section](./app/public/Hero-Section.png)
+
+### Skills Section
+
+![Skills Section](./app/public/Skills-Section.png)
 
 ## 📬 Contact
 
