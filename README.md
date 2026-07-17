@@ -1,4 +1,4 @@
-# [ 🚀 Personal Portfolio Website](https://heyvaidik.vercel.app/)
+# [🚀 Personal Portfolio Website](https://heyvaidik.vercel.app/)
 
 A modern and responsive developer portfolio built with **React** and **Tailwind CSS** to showcase my projects, technical skills, and professional journey.
 
