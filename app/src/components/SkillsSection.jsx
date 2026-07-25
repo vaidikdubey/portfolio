@@ -5,10 +5,11 @@ const skills = [
     // Core Languages
     { name: "JavaScript", level: 95, category: "languages" },
     { name: "C++", level: 90, category: "languages" },
-    { name: "TypeScript", level: 50, category: "languages" },
+    { name: "TypeScript", level: 85, category: "languages" },
     { name: "HTML/CSS", level: 95, category: "languages" },
 
     // Frontend
+    {name: "Next.js", level: 80, category: "frontend"},
     { name: "React", level: 85, category: "frontend" },
     { name: "Tailwind CSS", level: 90, category: "frontend" },
     { name: "GSAP", level: 80, category: "frontend" },

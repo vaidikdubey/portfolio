@@ -4,31 +4,61 @@ import { FaGithub } from "react-icons/fa";
 const projects = [
     {
         id: 1,
+        title: "DevSnippet: Minimalist Code Snippet Sharing Platform",
+        description:
+            "A minimal, privacy-centric code sharing platform with Monaco Editor integration, auto-expiring links, and self-destructing snippets.",
+        image: "/projects/DevSnippet.png",
+        tags: [
+            "Next.js",
+            "TypeScript",
+            "Monaco Editor",
+            "NextAuth",
+        ],
+        demoUrl: "https://devsnippet-space.vercel.app/",
+        github: "https://github.com/vaidikdubey/devsnippet",
+    },
+    {
+        id: 2,
+        title: "WhisperBox: AI-Powered Anonymous Messaging Platform",
+        description:
+            "A secure anonymous feedback platform featuring personal share links, robust dashboard settings, OTP verification, and AI-powered prompts.",
+        image: "/projects/WhisperBox.png",
+        tags: [
+            "Next.js",
+            "TypeScript",      
+            "Gemini API",
+            "NextAuth",
+        ],
+        demoUrl: "https://whisperbox-msg.vercel.app/",
+        github: "https://github.com/vaidikdubey/WhisperBox",
+    },
+    {
+        id: 3,
         title: "FormCraft: No-Code Custom Form Builder",
         description:
             "A no-code form builder with drag-and-drop customization, conditional logic, secure authentication, and payment integration.",
         image: "/projects/FormCraft.png",
-        tags: ["React", "Node.js", "MongoDB"],
+        tags: ["React", "Node.js", "MongoDB", "dnd-kit"],
         demoUrl: "https://formcraft-wcrv.onrender.com/",
         github: "https://github.com/vaidikdubey/FormCraft",
     },
     {
-        id: 2,
+        id: 4,
         title: "EduFlow: Learning Management System",
         description:
             "A full-stack learning management system with course management, quizzes, analytics, certificates, and role-based access.",
         image: "/projects/EduFlow.png",
-        tags: ["React", "Node.js", "PostgreSQL"],
+        tags: ["React", "Node.js", "PostgreSQL", "Razorpay"],
         demoUrl: "https://eduflow-campus.vercel.app/",
         github: "https://github.com/vaidikdubey/EduFlow",
     },
     {
-        id: 3,
+        id: 5,
         title: "Quiky: Quick Commerce Platform",
         description:
             "A fullstack quick-commerce platform powering product management, orders, inventory, rider assignment, and real-time tracking.",
         image: "/projects/Quiky-Code.png",
-        tags: ["React", "Node.js", "Google Maps"],
+        tags: ["React", "Node.js", "Google Maps", "PostgreSQL"],
         // demoUrl: "",
         github: "https://github.com/vaidikdubey/Quiky---Quick-Commerce-Platform",
     },
@@ -49,7 +79,7 @@ export const ProjectsSection = () => {
                     problem-solving.
                 </p>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                     {projects.map((project, key) => (
                         <div
                             key={key}
