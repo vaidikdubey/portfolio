@@ -4,6 +4,21 @@ import { FaGithub } from "react-icons/fa";
 const projects = [
     {
         id: 1,
+        title: "RepoLens: RAG-Powered Codebase Exploration Tool",
+        description:
+            "A RAG-powered codebase exploration tool featuring automated repository ingestion, semantic vector search, and precise file-path attributions.",
+        image: "/projects/RepoLens.png",
+        tags: [
+            "Next.js",
+            "TypeScript",
+            "Pinecone",
+            "Gemini API",
+        ],
+        demoUrl: "https://repolens-rag.vercel.app/",
+        github: "https://github.com/vaidikdubey/RepoLens",
+    },
+    {
+        id: 2,
         title: "DevSnippet: Minimalist Code Snippet Sharing Platform",
         description:
             "A minimal, privacy-centric code sharing platform with Monaco Editor integration, auto-expiring links, and self-destructing snippets.",
@@ -18,7 +33,7 @@ const projects = [
         github: "https://github.com/vaidikdubey/devsnippet",
     },
     {
-        id: 2,
+        id: 3,
         title: "WhisperBox: AI-Powered Anonymous Messaging Platform",
         description:
             "A secure anonymous feedback platform featuring personal share links, robust dashboard settings, OTP verification, and AI-powered prompts.",
@@ -33,7 +48,7 @@ const projects = [
         github: "https://github.com/vaidikdubey/WhisperBox",
     },
     {
-        id: 3,
+        id: 4,
         title: "FormCraft: No-Code Custom Form Builder",
         description:
             "A no-code form builder with drag-and-drop customization, conditional logic, secure authentication, and payment integration.",
@@ -43,7 +58,7 @@ const projects = [
         github: "https://github.com/vaidikdubey/FormCraft",
     },
     {
-        id: 4,
+        id: 5,
         title: "EduFlow: Learning Management System",
         description:
             "A full-stack learning management system with course management, quizzes, analytics, certificates, and role-based access.",
@@ -53,7 +68,7 @@ const projects = [
         github: "https://github.com/vaidikdubey/EduFlow",
     },
     {
-        id: 5,
+        id: 6,
         title: "Quiky: Quick Commerce Platform",
         description:
             "A fullstack quick-commerce platform powering product management, orders, inventory, rider assignment, and real-time tracking.",

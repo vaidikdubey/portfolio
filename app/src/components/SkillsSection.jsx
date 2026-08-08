@@ -13,13 +13,16 @@ const skills = [
     { name: "React", level: 85, category: "frontend" },
     { name: "Tailwind CSS", level: 90, category: "frontend" },
     { name: "GSAP", level: 80, category: "frontend" },
+    {name: "ShadCn UI", level: 90, category: "frontend"},
 
-    // Backend
+    // Backend & AI/ML
     { name: "Node.js", level: 90, category: "backend" },
     { name: "Express.js", level: 90, category: "backend" },
     { name: "REST APIs", level: 90, category: "backend" },
     { name: "PostgreSQL", level: 85, category: "backend" },
     { name: "MongoDB", level: 85, category: "backend" },
+    { name: "Pinecone Vector DB", level: 75, category: "backend" },
+    { name: "RAG & AI Embeddings", level: 75, category: "backend" },
 
     // Developer Tools
     { name: "DSA", level: 80, category: "tools" },
