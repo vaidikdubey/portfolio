@@ -4,6 +4,21 @@ import { FaGithub } from "react-icons/fa";
 const projects = [
     {
         id: 1,
+        title: "KisanDisha - AI-powered market price intelligence for Indian farmers",
+        description:
+            "Full-stack platform ingesting live government mandi price data via automated, AWS Lambda pipeline, with an AI agent that gives farmers grounded, data-backed selling recommendations.",
+        image: "/projects/KisanDisha.png",
+        tags: [
+            "Next.js",
+            "TypeScript",
+            "AWS Lambda",
+            "Redis",
+        ],
+        demoUrl: "https://kisandisha.vercel.app",
+        github: "https://github.com/vaidikdubey/KisanDisha",
+    },
+    {
+        id: 2,
         title: "RepoLens: RAG-Powered Codebase Exploration Tool",
         description:
             "A RAG-powered codebase exploration tool featuring automated repository ingestion, semantic vector search, and precise file-path attributions.",
@@ -18,7 +33,7 @@ const projects = [
         github: "https://github.com/vaidikdubey/RepoLens",
     },
     {
-        id: 2,
+        id: 3,
         title: "DevSnippet: Minimalist Code Snippet Sharing Platform",
         description:
             "A minimal, privacy-centric code sharing platform with Monaco Editor integration, auto-expiring links, and self-destructing snippets.",
@@ -33,7 +48,7 @@ const projects = [
         github: "https://github.com/vaidikdubey/devsnippet",
     },
     {
-        id: 3,
+        id: 4,
         title: "WhisperBox: AI-Powered Anonymous Messaging Platform",
         description:
             "A secure anonymous feedback platform featuring personal share links, robust dashboard settings, OTP verification, and AI-powered prompts.",
@@ -48,7 +63,7 @@ const projects = [
         github: "https://github.com/vaidikdubey/WhisperBox",
     },
     {
-        id: 4,
+        id: 5,
         title: "FormCraft: No-Code Custom Form Builder",
         description:
             "A no-code form builder with drag-and-drop customization, conditional logic, secure authentication, and payment integration.",
@@ -58,7 +73,7 @@ const projects = [
         github: "https://github.com/vaidikdubey/FormCraft",
     },
     {
-        id: 5,
+        id: 6,
         title: "EduFlow: Learning Management System",
         description:
             "A full-stack learning management system with course management, quizzes, analytics, certificates, and role-based access.",
@@ -68,7 +83,7 @@ const projects = [
         github: "https://github.com/vaidikdubey/EduFlow",
     },
     {
-        id: 6,
+        id: 7,
         title: "Quiky: Quick Commerce Platform",
         description:
             "A fullstack quick-commerce platform powering product management, orders, inventory, rider assignment, and real-time tracking.",
