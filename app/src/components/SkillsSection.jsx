@@ -5,30 +5,32 @@ const skills = [
     // Core Languages
     { name: "JavaScript", level: 95, category: "languages" },
     { name: "C++", level: 90, category: "languages" },
-    { name: "TypeScript", level: 85, category: "languages" },
+    { name: "TypeScript", level: 90, category: "languages" },
     { name: "HTML/CSS", level: 95, category: "languages" },
 
     // Frontend
-    {name: "Next.js", level: 80, category: "frontend"},
-    { name: "React", level: 85, category: "frontend" },
-    { name: "Tailwind CSS", level: 90, category: "frontend" },
-    { name: "GSAP", level: 80, category: "frontend" },
-    {name: "ShadCn UI", level: 90, category: "frontend"},
+    { name: "Next.js", level: 90, category: "frontend" },
+    { name: "React", level: 90, category: "frontend" },
+    { name: "Tailwind CSS", level: 95, category: "frontend" },
+    { name: "GSAP", level: 90, category: "frontend" },
+    { name: "ShadCn UI", level: 95, category: "frontend" },
 
     // Backend & AI/ML
     { name: "Node.js", level: 90, category: "backend" },
     { name: "Express.js", level: 90, category: "backend" },
-    { name: "REST APIs", level: 90, category: "backend" },
-    { name: "PostgreSQL", level: 85, category: "backend" },
-    { name: "MongoDB", level: 85, category: "backend" },
+    { name: "REST APIs", level: 95, category: "backend" },
+    { name: "PostgreSQL", level: 95, category: "backend" },
+    { name: "MongoDB", level: 90, category: "backend" },
+    { name: "Redis", level: 80, category: "backend" },
     { name: "Pinecone Vector DB", level: 75, category: "backend" },
     { name: "RAG & AI Embeddings", level: 75, category: "backend" },
 
     // Developer Tools
     { name: "DSA", level: 80, category: "tools" },
     { name: "Git & GitHub", level: 90, category: "tools" },
-    { name: "Docker", level: 50, category: "tools" },
-    { name: "Postman", level: 80, category: "tools" },
+    { name: "Docker", level: 80, category: "tools" },
+    { name: "Vitest", level: 75, category: "tools" },
+    { name: "Postman", level: 90, category: "tools" },
     { name: "VS Code", level: 95, category: "tools" },
     { name: "VBA & Excel", level: 80, category: "tools" },
 ];
