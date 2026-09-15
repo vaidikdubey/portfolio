@@ -29,7 +29,7 @@ const projects = [
             "Pinecone",
             "Gemini API",
         ],
-        demoUrl: "https://repolens-rag.vercel.app/",
+        demoUrl: "https://repolens-rag.vercel.app",
         github: "https://github.com/vaidikdubey/RepoLens",
     },
     {
@@ -44,7 +44,7 @@ const projects = [
             "Monaco Editor",
             "NextAuth",
         ],
-        demoUrl: "https://devsnippet-space.vercel.app/",
+        demoUrl: "https://devsnippet-space.vercel.app",
         github: "https://github.com/vaidikdubey/devsnippet",
     },
     {
@@ -59,7 +59,7 @@ const projects = [
             "Gemini API",
             "NextAuth",
         ],
-        demoUrl: "https://whisperbox-msg.vercel.app/",
+        demoUrl: "https://whisperbox-msg.vercel.app",
         github: "https://github.com/vaidikdubey/WhisperBox",
     },
     {
@@ -69,7 +69,7 @@ const projects = [
             "A no-code form builder with drag-and-drop customization, conditional logic, secure authentication, and payment integration.",
         image: "/projects/FormCraft.png",
         tags: ["React", "Node.js", "MongoDB", "dnd-kit"],
-        demoUrl: "https://formcraft-wcrv.onrender.com/",
+        demoUrl: "https://formcraft-wcrv.onrender.com",
         github: "https://github.com/vaidikdubey/FormCraft",
     },
     {
@@ -79,7 +79,7 @@ const projects = [
             "A full-stack learning management system with course management, quizzes, analytics, certificates, and role-based access.",
         image: "/projects/EduFlow.png",
         tags: ["React", "Node.js", "PostgreSQL", "Razorpay"],
-        demoUrl: "https://eduflow-campus.vercel.app/",
+        demoUrl: "https://eduflow-campus.vercel.app",
         github: "https://github.com/vaidikdubey/EduFlow",
     },
     {
@@ -87,9 +87,9 @@ const projects = [
         title: "Quiky: Quick Commerce Platform",
         description:
             "A fullstack quick-commerce platform powering product management, orders, inventory, rider assignment, and real-time tracking.",
-        image: "/projects/Quiky-Code.png",
+        image: "/projects/Quiky.png",
         tags: ["React", "Node.js", "Google Maps", "PostgreSQL"],
-        // demoUrl: "",
+        demoUrl: "https://quiky-playground.vercel.app",
         github: "https://github.com/vaidikdubey/Quiky---Quick-Commerce-Platform",
     },
 ];
