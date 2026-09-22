@@ -8,62 +8,52 @@ const projects = [
         description:
             "Full-stack platform ingesting live government mandi price data via automated, AWS Lambda pipeline, with an AI agent that gives farmers grounded, data-backed selling recommendations.",
         image: "/projects/KisanDisha.png",
-        tags: [
-            "Next.js",
-            "TypeScript",
-            "AWS Lambda",
-            "Redis",
-        ],
+        tags: ["Next.js", "TypeScript", "AWS Lambda", "Redis"],
         demoUrl: "https://kisandisha.vercel.app",
         github: "https://github.com/vaidikdubey/KisanDisha",
     },
     {
         id: 2,
+        title: "Tasko: Priority Task Scheduler with C++ Engine",
+        description:
+            "A task scheduler powered by a C++17 backend using max-heap for priority ordering, adjacency list for dependencies, and DFS cycle detection — served over a hand-rolled REST API.",
+        image: "/projects/Tasko.png",
+        tags: ["C++17", "Next.js", "TypeScript", "Docker"],
+        demoUrl: "https://usetasko.vercel.app",
+        github: "https://github.com/vaidikdubey/tasko",
+    },
+    {
+        id: 3,
         title: "RepoLens: RAG-Powered Codebase Exploration Tool",
         description:
             "A RAG-powered codebase exploration tool featuring automated repository ingestion, semantic vector search, and precise file-path attributions.",
         image: "/projects/RepoLens.png",
-        tags: [
-            "Next.js",
-            "TypeScript",
-            "Pinecone",
-            "Gemini API",
-        ],
+        tags: ["Next.js", "TypeScript", "Pinecone", "Gemini API"],
         demoUrl: "https://repolens-rag.vercel.app",
         github: "https://github.com/vaidikdubey/RepoLens",
     },
     {
-        id: 3,
+        id: 4,
         title: "DevSnippet: Minimalist Code Snippet Sharing Platform",
         description:
             "A minimal, privacy-centric code sharing platform with Monaco Editor integration, auto-expiring links, and self-destructing snippets.",
         image: "/projects/DevSnippet.png",
-        tags: [
-            "Next.js",
-            "TypeScript",
-            "Monaco Editor",
-            "NextAuth",
-        ],
+        tags: ["Next.js", "TypeScript", "Monaco Editor", "NextAuth"],
         demoUrl: "https://devsnippet-space.vercel.app",
         github: "https://github.com/vaidikdubey/devsnippet",
     },
     {
-        id: 4,
+        id: 5,
         title: "WhisperBox: AI-Powered Anonymous Messaging Platform",
         description:
             "A secure anonymous feedback platform featuring personal share links, robust dashboard settings, OTP verification, and AI-powered prompts.",
         image: "/projects/WhisperBox.png",
-        tags: [
-            "Next.js",
-            "TypeScript",      
-            "Gemini API",
-            "NextAuth",
-        ],
+        tags: ["Next.js", "TypeScript", "Gemini API", "NextAuth"],
         demoUrl: "https://whisperbox-msg.vercel.app",
         github: "https://github.com/vaidikdubey/WhisperBox",
     },
     {
-        id: 5,
+        id: 6,
         title: "FormCraft: No-Code Custom Form Builder",
         description:
             "A no-code form builder with drag-and-drop customization, conditional logic, secure authentication, and payment integration.",
@@ -73,7 +63,7 @@ const projects = [
         github: "https://github.com/vaidikdubey/FormCraft",
     },
     {
-        id: 6,
+        id: 7,
         title: "EduFlow: Learning Management System",
         description:
             "A full-stack learning management system with course management, quizzes, analytics, certificates, and role-based access.",
@@ -83,7 +73,7 @@ const projects = [
         github: "https://github.com/vaidikdubey/EduFlow",
     },
     {
-        id: 7,
+        id: 8,
         title: "Quiky: Quick Commerce Platform",
         description:
             "A fullstack quick-commerce platform powering product management, orders, inventory, rider assignment, and real-time tracking.",

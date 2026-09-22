@@ -26,9 +26,9 @@ const skills = [
     { name: "RAG & AI Embeddings", level: 75, category: "backend" },
 
     // Developer Tools
-    { name: "DSA", level: 80, category: "tools" },
+    { name: "DSA", level: 90, category: "tools" },
     { name: "Git & GitHub", level: 90, category: "tools" },
-    { name: "Docker", level: 80, category: "tools" },
+    { name: "Docker", level: 90, category: "tools" },
     { name: "Vitest", level: 75, category: "tools" },
     { name: "Postman", level: 90, category: "tools" },
     { name: "VS Code", level: 95, category: "tools" },
