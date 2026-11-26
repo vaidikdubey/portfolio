@@ -104,4 +104,4 @@ If you'd like to connect, collaborate, or discuss opportunities, feel free to re
 
 ---
 
-⭐ If you found this portfolio interesting, consider giving it a star!
+⭐ If you found my portfolio interesting, consider giving it a star!
